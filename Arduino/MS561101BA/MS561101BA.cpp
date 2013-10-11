@@ -110,6 +110,7 @@ bool MS561101BA::readPROM() {
 		uint8_t regAddr = MS561101BA_RA_PROM + (add << 1);
 		success = I2Cdev::readWord(devAddr, regAddr, &prom[add]);
 	}
+        // TODO check CRC
 	return success;
 }
 
